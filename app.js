@@ -82,7 +82,6 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
     let arraySum = sum(testArray[0], sum(testArray[1], testArray[2])[0])[0];
     let arraySumMessage = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + arraySum + ' is their sum.';
-    //console.log(arraySumMessage); //bloody string concatenation
     return [arraySum, arraySumMessage];
 }
 
@@ -104,11 +103,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    let arrayMult = multiply(testArray[0], multiply(testArray[1], testArray[2])[0])[0];
+    let arrayMultMessage = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + arrayMult + '.';
+    //console.log(arrayMultMessage);
+    return [arrayMult, arrayMultMessage];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
